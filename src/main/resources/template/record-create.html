@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание записи</title>
+</head>
+<body>
+<form action="#" th:action="@{/record-create}" th:object="${record}" method="post">
+    <label for="name">Заголовок</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Заголовок">
+    <label for="content">Содержимое записи</label>
+    <input type="text" th:field="*{content}" id="content" placeholder="Содержимое записи">
+    <label for="createdDate">Дата создания записи</label>
+    <input type="text" th:field="*{createdDate}" id="createdDate" placeholder="Дата создания записи">
+    <input type="submit" value="Создание записи">
+</form>
+</body>
+</html>

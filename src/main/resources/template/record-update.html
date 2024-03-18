@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменение записи</title>
+</head>
+<body>
+<form action="#" th:action="@{/record-update}" th:object="${record}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="name">Заголовок</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Заголовок">
+    <br/>
+    <label for="content">Содержимое</label>
+    <input type="text" th:field="*{content}" id="content" placeholder="Содержимое записи">
+    <br/>
+    <label for="createdDate">Дата создания</label>
+    <input type="text" th:field="*{createdDate}" id="createdDate" placeholder="Дата создания записи">
+    <br/>
+    <input type="submit" value="Изменить запись">
+</form>
+</body>
+</html>
